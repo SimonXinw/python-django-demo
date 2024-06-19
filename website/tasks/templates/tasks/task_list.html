@@ -1,0 +1,16 @@
+<!-- tasks/templates/tasks/task_list.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List</title>
+</head>
+<body>
+    <h3>Task List</h3>
+    <a href="{% url 'tasks:task_create' %}">Create New Task</a>
+    {% for task in tasks %}
+    <p>{{ forloop.counter }}. {{ task.name }} - {{ task.get_status_display }}</p>
+    {% endfor %}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!-- tasks/templates/tasks/task_form.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Task</title>
+</head>
+<body>
+    <h3>Create New Task</h3>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Task</button>
+    </form>
+</body>
+</html>
